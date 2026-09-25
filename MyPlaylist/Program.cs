@@ -9,5 +9,11 @@ secondTrack.Name = "Jepa";
 secondTrack.Artist = "OPA";
 secondTrack.DurationSeconds = 89;
 
-Console.WriteLine($"New track {track.Name} was dropped by {track.Artist}, length of song is {track.DurationSeconds} seconds!");
-Console.WriteLine($"Second track {secondTrack.Name} was dropped by {secondTrack.Artist}! length of this song is {secondTrack.DurationSeconds} seconds!");
+List<Track> playlist = new List<Track>();
+playlist.Add(track);
+playlist.Add(secondTrack);
+
+foreach (Track song in playlist)
+{
+    Console.WriteLine($"Track: {song.Name}, Artist: {song.Artist}, Duration in seconds: {song.DurationSeconds} seconds.");
+}
